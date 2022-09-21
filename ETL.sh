@@ -11,7 +11,7 @@ log(){
 
 extract(){
   log "Extract phase Started"
-  wget wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Final%20Assignment/tolldata.tgz -P "$dir_documents"
+  wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Final%20Assignment/tolldata.tgz -P "$dir_documents"
   cd $dir_documents
   tar -xvzf *.tgz; rm *.tgz
   cut -d "," -f1,2,3,4 vehicle-data.csv > extracted_csv.csv; rm vehicle-data.csv
